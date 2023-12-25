@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <div class="container" id="background">
+        <div class="calculator">
+            <form action="">
+                <div class="display">
+                    <input type="text" name="display" id="">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="display.value =' '" class='operator'>
+                    <input type="button" value="DE" onclick="display.value=display.value.toString().slice(0,-1)"
+                        class='operator'>
+                    <input type="button" value="." onclick="display.value +='.'" class='operator'>
+                    <input type="button" value="/" onclick="display.value +='/'" class='operator'>
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value +='7'">
+                    <input type="button" value="8" onclick="display.value +='8'">
+                    <input type="button" value="9" onclick="display.value +='9'">
+                    <input type="button" value="*" onclick="display.value +='*'" class='operator'>
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value +='4'">
+                    <input type="button" value="5" onclick="display.value +='5'">
+                    <input type="button" value="6" onclick="display.value +='6'">
+                    <input type="button" value="-" onclick="display.value +='-'" class='operator'>
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value +='1'">
+                    <input type="button" value="2" onclick="display.value +='2'">
+                    <input type="button" value="3" onclick="display.value +='3'">
+                    <input type="button" value="+" onclick="display.value +='+'" class='operator'>
+                </div>
+                <div>
+                    <input type="button" value="00">
+                    <input type="button" value="0">
+                    <input type="button" value="=" class="equal operator"
+                        onclick="display.value=eval(display.value) ,result()">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="btn">
+        <button onclick="update()" style="background-color: #e3f9ff,; border: 1px solid #e3f9ff;"></button>
+        <button onclick="update1()" style="background-color: peachpuff; border: 1px solid  peachpuff;;"></button>
+        <button onclick='update3()' style="background-color:thistle ; border: 1px solid thistle ;"></button>
+        <button onclick="update4()" style="background-color:gainsboro ; border: 1px solid gainsboro ;"></button>
+    </div>
+    <script>
+        function result() {
+            alert('Guess it 😀')
+        }
+
+        var background = document.getElementById('background')
+
+        function update() {
+            background.style.backgroundColor = '#e3f9ff'
+        }
+        function update1() {
+            background.style.backgroundColor = 'peachpuff'
+        }
+        function update3() {
+            background.style.backgroundColor = 'thistle'
+        }
+        function update4() {
+            background.style.backgroundColor = 'gainsboro'
+        }
+
+    </script>
+</body>
+
+</html>
